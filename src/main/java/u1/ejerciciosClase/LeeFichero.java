@@ -1,6 +1,9 @@
 package u1.ejerciciosClase;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 
 public class LeeFichero {
     public static void main(String[] args) {
@@ -24,10 +27,24 @@ public class LeeFichero {
         File f = new File(fichero);
 
         // Compruebo si es carpeta / fichero
-        //TODO
+        if (f.isDirectory()) {
+            System.out.println("Es una carpeta");
+            return;
+        }
+        if (!f.exists()) {
+            System.out.println("El fichero no existe");
+            return;
+        }
 
         // Leo el file
-        //TODO
+        try (BufferedReader br = new BufferedReader(new FileReader(f));) {
+            String linea = "";
+            while ((linea = br.readLine()) != null) {
+                System.out.println(linea);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 }
