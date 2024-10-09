@@ -1,20 +1,21 @@
 package u1.ejerciciosClase;
 
-import java.util.Scanner;
+import ejercicio1.LeeFichero;
+
+import java.io.IOException;
 
 public class LanzaLeeFichero {
     public static void main(String[] args) {
-        //Este programa lanza el programa LeeFichero (nos hemos creado un ejecutable / artefacto)
-        // y es LeeFichero el que lee del fichero, LanzaLeeFichero solo redirecciona E/S.
 
-        System.out.print("Qué fichero quieres leer: ");
-        Scanner sc = new Scanner(System.in);
-        String f = sc.nextLine();
-
-        //Ejecutar LeeFichero (debe ser un artefacto compilado) con el argumento de ejecución y redireccionar las E/S que necesitemos
-        // Aquí no se puede usar ni File, ni FileReader.
-
-
-
+        try {
+            //Creamos un nuevo proceso con la ruta completa del programa a ejecutar
+            ProcessBuilder proceso = new ProcessBuilder();
+            proceso.command("./out/production/Procesos/ejercicio1/", "LeeFichero", "./files/ficheroEj1.txt");
+            //Ejecutamos el process builder como proceso
+            Process process = proceso.inheritIO().start();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
