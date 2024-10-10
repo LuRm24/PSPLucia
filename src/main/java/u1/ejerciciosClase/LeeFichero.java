@@ -23,6 +23,7 @@ public class LeeFichero {
                     while ((linea = br.readLine()) != null) {
                         System.out.println(linea);
                     }
+
                 }
                 catch (IOException e){
                     e.printStackTrace();
