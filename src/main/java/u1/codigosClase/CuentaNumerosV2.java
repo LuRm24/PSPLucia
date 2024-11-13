@@ -13,9 +13,10 @@ public class CuentaNumerosV2 {
     public static void main(String[] args) {
         System.out.println("Hasta qué número: ");
         Scanner sc = new Scanner(System.in);
-        int numero = Integer.parseInt(sc.nextLine());
+        int numero = Integer.parseInt(sc.nextLine());//sc.nextLine devuelve un String
+        // asi q lo convertimos en int
         for (int i =0; i<=numero; i++){
-            System.out.print(i + ", ");
+            System.out.print(i + " ,");
         }
         System.out.println("\nFIN");
     }

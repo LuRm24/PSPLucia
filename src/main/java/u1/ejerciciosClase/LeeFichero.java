@@ -4,7 +4,13 @@ import java.io.*;
 
 public class LeeFichero {
     public static void main(String[] args){
+       /* Crea un programa llamado LeeFichero que reciba como argumento de ejecución el fichero (o el path al fichero) que se quiere leer.
 
+        El programa debe comprobar que existe este argumento de ejecución, en caso contrario mostrará un mensaje diciendo cómo se debe ejecutar y terminará.
+
+        Si el fichero no existe, o es una carpeta, mostrará un mensaje de error informativo.
+
+                Si todo funciona bien, mostraremos por pantalla el contenido del fichero.*/
         //Comprobar que el numero de argumentos de ejecución es correcto
         if (args.length == 1) {
             //Creo un objeto de tipo File para poder comprobar si existe y si es una carpeta

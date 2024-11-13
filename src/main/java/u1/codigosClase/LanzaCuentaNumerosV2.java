@@ -5,7 +5,7 @@ import java.io.*;
 public class LanzaCuentaNumerosV2 {
     public static void main(String[] args) {
         //Este programa lanza el programa compilado CuentaNumerosV2
-        String[] proceso = {"java", "-jar", "./out/artifacts/PSPU1_jar2/PSPU1.jar"};
+        String[] proceso = {"java", "-jar", "./out/artifacts/PSP_jar4/PSP.jar"};
         ProcessBuilder pb = new ProcessBuilder(proceso);
         try {
             Process p = pb.start();
